@@ -1,6 +1,6 @@
 function Main() {
   return (
-    <div className="">
+    <div className="flex-grow bg-neutral-100">
       t
     </div>
   );
