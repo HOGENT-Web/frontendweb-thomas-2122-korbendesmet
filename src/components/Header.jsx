@@ -5,7 +5,7 @@ const Header = () => {
     let nav = useNavigate();
 
     return (
-        <div className="flex justify-between py-4 px-7 md:px-24 bg-neutral-900">
+        <div className="flex justify-between py-3 px-7 md:px-24 bg-neutral-900">
             <div className="relative w-52">
                 <img onClick={() => nav('/')} src={logo} className="object-contain hover:cursor-pointer" alt="Green uk oil logo" />
             </div>
