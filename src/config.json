@@ -1,4 +1,4 @@
 {
-    "base_url": "https://hoyspain-renting.herokuapp.com/api/",
+    "base_url": "http://localhost:9000/api",
     "token_key": "auth_token"
 }

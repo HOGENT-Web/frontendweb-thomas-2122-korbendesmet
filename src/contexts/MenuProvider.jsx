@@ -1,4 +1,5 @@
 import axios from "axios";
+import config from '../config.json';
 import { createContext, useCallback, useMemo, useState } from "react";
 
 export const MenuContext = createContext();
@@ -7,7 +8,7 @@ export const MenuProvider = ({ children }) => {
     const [gevondenMenuItems, setGevondenMenuItems] = useState([]);
 
     const zoekMenuItems = useCallback(async () => {
-        const data = await axios.get('http://localhost:9000/api/menu-items/');
+        const data = await axios.get(`${config.base_url}/menu-items`);
         setGevondenMenuItems(data.data);
     }, []);
 

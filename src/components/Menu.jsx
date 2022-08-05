@@ -14,17 +14,20 @@ const Menu = () => {
     }, [zoekMenuItems]);
 
     return (
-        <div className="flex flex-col font-serif my-16">
-            <div className="mx-auto text-6xl mb-6">Menu</div>
-            <div className="text-xl divide-y divide-neutral-900">
-                {
-                    gevondenMenuItems.map((MenuItem) => (
-                        <div key={MenuItem.menuItemID} className="flex hover:bg-neutral-200 p-3 gap-14 justify-between italic grow-1 ease-in duration-50 first:rounded-t-md last:rounded-b-md">
-                            <div>{MenuItem.beschrijving}</div>
-                            <div className="font-sans text-lg shrink-0 my-auto">{currencyFormat(MenuItem.prijs)}</div>
-                        </div>
-                    ))
-                }
+        <div className="w-[50%] mx-auto px-8">
+            <div className="flex flex-col font-serif my-16">
+                <div className="mx-auto text-6xl mb-6">Menu</div>
+                <div className="text-xl divide-y divide-neutral-900">
+                    {
+                        isNaN(gevondenMenuItems) ?
+                            gevondenMenuItems.map((MenuItem) => (
+                                <div key={MenuItem.menuItemID} className="flex hover:bg-neutral-200 p-3 gap-14 justify-between italic grow-1 ease-in duration-50 first:rounded-t-md last:rounded-b-md">
+                                    <div>{MenuItem.beschrijving}</div>
+                                    <div className="font-sans text-lg shrink-0 my-auto">{currencyFormat(MenuItem.prijs)}</div>
+                                </div>
+                            )) : <div className="rounded p-2 border-neutral-900 border w-fit mx-auto">Error met het laden van het menu</div>
+                    }
+                </div>
             </div>
         </div>
     )
