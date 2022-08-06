@@ -1,4 +1,5 @@
-import Reservaties from "./../components/Reservaties"
+import BrasserieCard from "./../components/BrasserieCard"
+import FoodtruckCard from "./../components/FoodtruckCard"
 import Menu from "./../components/Menu"
 import Afbeelding from "./../images/Olijven.jpg"
 
@@ -9,7 +10,13 @@ export default function Main() {
                 <div className="text-neutral-900 text-5xl md:text-8xl rounded-lg w-fit mx-auto text-center mt-56 mb-60 font-serif p-3 bg-neutral-200/60 stroke-white">Eat, drink & enjoy all day long</div>
             </div>
             <div className="">
-                <Reservaties />
+                <div className="w-[100%] mx-auto px-8">
+                    <div className="flex text-center my-16 text-xl w-[90%] mx-auto justify-around">
+                        <BrasserieCard />
+                        <div class="w-[2px] bg-black rounded-full" />
+                        <FoodtruckCard />
+                    </div>
+                </div>
                 <div className="flex flex-col bg-neutral-900 text-neutral-200">
                     <div className="mx-auto my-14 font-serif text-6xl">Quarante</div>
                     <div className="w-[50%] mb-16 mx-auto grid grid-cols-2 gap-64 text-right">

@@ -26,6 +26,18 @@ const Calendar = () => {
                 initialView="dayGridWeek"
                 events={[
                     { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
+                    { title: 'event 1', date: '2022-08-04T12:50:00Z' },
                     { title: 'event 2', date: '2022-08-04T12:30:00Z' }
                 ]}
                 eventContent={renderEventContent}
