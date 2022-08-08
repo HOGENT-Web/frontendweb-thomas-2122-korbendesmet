@@ -6,16 +6,43 @@ export const MenuContext = createContext();
 
 export const MenuProvider = ({ children }) => {
     const [gevondenMenuItems, setGevondenMenuItems] = useState([]);
+    const [menuItem, setMenuItem] = useState([]);
+
+    const createMenuItem = useCallback(async (data) => {
+
+        const menuItem = {
+            beschrijving: data.beschrijving,
+            prijs: data.prijs
+        };
+
+        await axios.post(`${config.base_url}/menu-items`, menuItem);
+    }, []);
 
     const zoekMenuItems = useCallback(async () => {
         const data = await axios.get(`${config.base_url}/menu-items`);
         setGevondenMenuItems(data.data);
     }, []);
 
+    const getMenuItemById = useCallback(async (id) => {
+        const data = await axios.get(`${config.base_url}/menu-items/${id}`);
+        setMenuItem(data.data);
+    }, []);
+
+    const updateMenuItem = useCallback(async (id, data) => {
+        await axios.put(`${config.base_url}/menu-items/${id}`, data);
+    }, []);
+
+    const removeMenuItem = useCallback(async (id) => {
+        await axios.delete(`${config.base_url}/menu-items/${id}`);
+    }, []);
+
     const value = useMemo(() => ({
-        gevondenMenuItems,
-        zoekMenuItems
-    }), [gevondenMenuItems, zoekMenuItems])
+        createMenuItem,
+        zoekMenuItems, gevondenMenuItems,
+        getMenuItemById, menuItem,
+        updateMenuItem,
+        removeMenuItem
+    }), [createMenuItem, zoekMenuItems, gevondenMenuItems, getMenuItemById, menuItem, updateMenuItem, removeMenuItem])
 
     return (
         <MenuContext.Provider value={value}>

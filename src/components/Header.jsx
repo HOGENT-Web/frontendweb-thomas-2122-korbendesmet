@@ -17,12 +17,12 @@ const Header = () => {
     const logout = useLogout();
     const { isAuthed, loading } = useSession();
 
+    //TODO: Error if login is false and not all fields in use
     const onSubmit = useCallback(async (data) => {
         console.log('login')
         await login(data.email, data.wachtwoord);
 
         changeState(!enabled)
-        // document.getElementById("form").reset();
     }, [enabled, login]);
 
     const handleLogout = useCallback(() => {

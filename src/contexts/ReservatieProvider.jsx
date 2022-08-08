@@ -14,6 +14,8 @@ export const ReservatieProvider = ({ children }) => {
             datum: data.datum,
             voornaam: data.voornaam,
             achternaam: data.achternaam,
+            telefoon: data.telefoon,
+            email: data.email,
             aantalPersonen: data.aantalPersonen,
             tijdslot: data.tijdslot,
             reservatietype: data.reservatietype
