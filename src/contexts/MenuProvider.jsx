@@ -9,13 +9,7 @@ export const MenuProvider = ({ children }) => {
     const [menuItem, setMenuItem] = useState([]);
 
     const createMenuItem = useCallback(async (data) => {
-
-        const menuItem = {
-            beschrijving: data.beschrijving,
-            prijs: data.prijs
-        };
-
-        await axios.post(`${config.base_url}/menu-items`, menuItem);
+        await axios.post(`${config.base_url}/menu-items`, data);
     }, []);
 
     const zoekMenuItems = useCallback(async () => {

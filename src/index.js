@@ -7,6 +7,8 @@ import { AuthenticationProvider } from './contexts/AuthenticationProvider';
 import { ReservatieProvider } from './contexts/ReservatieProvider';
 import { MenuProvider } from './contexts/MenuProvider';
 import { AdminProvider } from './contexts/AdminProvider';
+import { BrasserieProvider } from './contexts/BrasserieProvider';
+import { FoodtruckProvider } from './contexts/FoodtruckProvider';
 
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -26,25 +28,29 @@ root.render(
                 <AuthenticationProvider>
                     <ReservatieProvider>
                         <MenuProvider>
+                            <BrasserieProvider>
+                                <FoodtruckProvider>
 
-                            <div className="flex flex-col min-h-screen">
-                                <Header />
-                                <Routes>
-                                    {/* general routes */}
-                                    <Route path="" element={<Main />} />
-                                    <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
+                                    <div className="flex flex-col min-h-screen selection:bg-neutral-500 selection:text-black">
+                                        <Header />
+                                        <Routes>
+                                            {/* general routes */}
+                                            <Route path="" element={<Main />} />
+                                            <Route path="/algemene-voorwaarden" element={<AlgemeneVoorwaarden />} />
 
-                                    {/* admin routes */}
-                                    <Route element={<IsAuth />}>
-                                        <Route path="/admin" element={<AdminHome />} />
-                                    </Route>
+                                            {/* admin routes */}
+                                            <Route element={<IsAuth />}>
+                                                <Route path="/admin" element={<AdminHome />} />
+                                            </Route>
 
-                                    {/* 404 */}
-                                    <Route path="*" element={<PageNotFound />} />
-                                </Routes>
-                                <Footer />
-                            </div>
+                                            {/* 404 */}
+                                            <Route path="*" element={<PageNotFound />} />
+                                        </Routes>
+                                        <Footer />
+                                    </div>
 
+                                </FoodtruckProvider>
+                            </BrasserieProvider>
                         </MenuProvider>
                     </ReservatieProvider>
                 </AuthenticationProvider>
