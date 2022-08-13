@@ -42,7 +42,7 @@ export const BrasserieProvider = ({ children }) => {
         getOpeningsuurById, brasserieOpeningsuur,
         updateOpeningsuur,
         removeOpeningsuur
-    }), [])
+    }), [brasserieOpeningsuren, brasserieOpeningsuur, createOpeningsuur, getAllOpeningsuren, getOpeningsuurById, removeOpeningsuur, updateOpeningsuur])
 
     return (
         <BrasserieContext.Provider value={value}>

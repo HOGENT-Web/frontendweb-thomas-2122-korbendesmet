@@ -50,7 +50,7 @@ const Menuitems = () => {
     }, [zoekMenuItems]);
 
     return (
-        <div className="rounded-lg p-4 h-96 mt-14 ">
+        <div className="rounded-lg p-4 h-96 mt-14 w-[50%] mx-auto">
             <select multiple id='menuItemList' className=" px-2 bg-neutral-100 border border-neutral-900 w-full h-[50%]">
                 {
                     gevondenMenuItems.map((menuitem) => (
@@ -63,7 +63,7 @@ const Menuitems = () => {
                 <AiOutlinePlus title="Toevoegen" onClick={handleAdd} color='black' size={40} className='hover:cursor-pointer ' />
             </div>
             <div className="flex justify-between">
-                <input id="prijs" type="number" placeholder="prijs" className="px-2 py-1 bg-neutral-100 border border-neutral-900 w-[6%]" />
+                <input id="prijs" type="number" placeholder="prijs" className="px-2 py-1 bg-neutral-100 border border-neutral-900 w-[7%]" />
                 <input id="beschrijving" type="text" placeholder="beschrijving" className="px-2 py-1 bg-neutral-100 border border-neutral-900 w-[90%]" />
             </div>
             <label id="error1" className="absolute right-10 text-red-400 font-semibold" hidden={true}>Gelieve een menuitem te selecteren</label>

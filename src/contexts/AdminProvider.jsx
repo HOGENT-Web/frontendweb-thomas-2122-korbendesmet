@@ -38,7 +38,7 @@ export const AdminProvider = ({ children }) => {
         return data;
     }, []);
 
-    const adminVerwijderen = useCallback(async (id) => {
+    const removeAdmin = useCallback(async (id) => {
         await axios.delete(`${config.base_url}/admins/${id}`);
     }, []);
 
@@ -48,8 +48,8 @@ export const AdminProvider = ({ children }) => {
         admin, getAdminById,
         updateAdmin,
         loginAdmin,
-        adminVerwijderen,
-    }), [createAdmin, admins, getAllAdmins, admin, getAdminById, updateAdmin, loginAdmin, adminVerwijderen]);
+        removeAdmin,
+    }), [createAdmin, admins, getAllAdmins, admin, getAdminById, updateAdmin, loginAdmin, removeAdmin]);
 
     return (
         <AdminContext.Provider value={value}>

@@ -19,14 +19,13 @@ const Header = () => {
 
     //TODO: Error if login is false and not all fields in use
     const onSubmit = useCallback(async (data) => {
-        console.log('login')
-        await login(data.email, data.wachtwoord);
-
+        document.getElementById("errorLogin").hidden = true;
+        const temp = await login(data.email, data.wachtwoord);
+        if (temp === false) return document.getElementById("errorLogin").hidden = false;
         changeState(!enabled)
     }, [enabled, login]);
 
     const handleLogout = useCallback(() => {
-        console.log('logout')
         logout();
     }, [logout]);
 
@@ -53,6 +52,7 @@ const Header = () => {
                                             <label className="block ml-1 mt-2">Wachtwoord: </label>
                                             <input {...register('wachtwoord')} type="password" label="wachtwoord" className="w-full bg-neutral-900 border border-neutral-200 rounded-lg p-1" />
                                             <input type="submit" disabled={loading} value="inloggen" className="underline hover:bg-neutral-800 bg-neutral-900 border border-neutral-900 hover:border-neutral-200 rounded-lg p-1 px-2 mt-3 float-right mb-2 italic" />
+                                            <div id="errorLogin" hidden={true} className="text-red-400 text-sm mt-4">Verkeerde gegevens!</div>
                                         </form>
                                     </FormProvider>
                                 </div> : null

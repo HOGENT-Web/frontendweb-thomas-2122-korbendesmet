@@ -1,6 +1,9 @@
 import { useCallback, useContext, useState, useEffect } from "react"
 import Calendar from "../components/AdminComponents/Calendar"
 import Menuitems from "../components/AdminComponents/Menuitems"
+import Brasserie from "../components/AdminComponents/Brasserie"
+import Foodtruck from "../components/AdminComponents/Foodtruck"
+import Admins from "../components/AdminComponents/Admins"
 
 export default function Main() {
     const [component, setComponent] = useState('1');
@@ -48,7 +51,6 @@ export default function Main() {
             return
         }
     };
-    console.log(component);
 
     const renderSwitch = (component) => {
         switch (component) {
@@ -57,11 +59,11 @@ export default function Main() {
             case '2':
                 return <Menuitems />
             case '3':
-                return <Calendar />
+                return <Brasserie />
             case '4':
-                return <Calendar />
+                return <Foodtruck />
             case '5':
-                return <Calendar />
+                return <Admins />
             default:
                 return <div className="mt-12 text-2xl text-center">Deze error zou u normaal niet mogen zien...</div>;
         }

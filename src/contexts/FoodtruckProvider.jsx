@@ -42,7 +42,7 @@ export const FoodtruckProvider = ({ children }) => {
         getOpeningsuurById, foodtruckOpeningsuur,
         updateOpeningsuur,
         removeOpeningsuur
-    }), [])
+    }), [createOpeningsuur, foodtruckOpeningsuren, foodtruckOpeningsuur, getAllOpeningsuren, getOpeningsuurById, removeOpeningsuur, updateOpeningsuur])
 
     return (
         <FoodtruckContext.Provider value={value}>

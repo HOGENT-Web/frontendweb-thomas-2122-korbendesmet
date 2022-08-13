@@ -41,7 +41,6 @@ const BrasserieCard = () => {
     setSelectedDay(null);
     setTime('');
     await createReservatie(returnData);
-    console.log(returnData);
   }, [createReservatie, modalEnabled, selectedDay, time]);
 
   const changeTime = useCallback(async (tijdstip) => {
