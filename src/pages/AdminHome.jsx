@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState, useEffect } from "react"
+import { useState } from "react"
 import Calendar from "../components/AdminComponents/Calendar"
 import Menuitems from "../components/AdminComponents/Menuitems"
 import Brasserie from "../components/AdminComponents/Brasserie"
@@ -71,12 +71,12 @@ export default function Main() {
 
     return (
         <div className="flex flex-col flex-grow bg-neutral-100" >
-            <div className="grid grid-cols-5 mx-auto">
-                <button id="1" onClick={toggleView} className="mx-3 my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl underline">Overzicht</button>
-                <button id="2" onClick={toggleView} className="mx-3 my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Menu</button>
-                <button id="3" onClick={toggleView} className="mx-3 my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Brasserie</button>
-                <button id="4" onClick={toggleView} className="mx-3 my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Foodtruck</button>
-                <button id="5" onClick={toggleView} className="mx-3 my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Admins</button>
+            <div className="md:grid grid-cols-5 mx-auto">
+                <button id="1" onClick={toggleView} className="mx-3 my-2 md:my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl underline">Overzicht</button>
+                <button id="2" onClick={toggleView} className="mx-3 md:my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Menu</button>
+                <button id="3" onClick={toggleView} className="mx-3 md:my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Brasserie</button>
+                <button id="4" onClick={toggleView} className="mx-3 md:my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Foodtruck</button>
+                <button id="5" onClick={toggleView} className="mx-3 my-2 md:my-4 px-4 py-2 rounded-3xl border border-neutral-900 bg-neutral-900 text-white text-xl hover:underline">Admins</button>
             </div>
             <div className="mx-6 flex-grow">
                 {renderSwitch(component)}

@@ -14,7 +14,7 @@ const Menu = () => {
     }, [zoekMenuItems]);
 
     return (
-        <div className="w-[50%] mx-auto px-8">
+        <div className="lg:w-[50%] w-full mx-auto px-8">
             <div className="flex flex-col font-serif my-16">
                 <div className="mx-auto text-6xl mb-6">Menu</div>
                 <div className="text-xl divide-y divide-neutral-900">

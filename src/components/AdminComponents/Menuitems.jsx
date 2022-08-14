@@ -50,7 +50,7 @@ const Menuitems = () => {
     }, [zoekMenuItems]);
 
     return (
-        <div className="rounded-lg p-4 h-96 mt-14 w-[50%] mx-auto">
+        <div className="rounded-lg p-4 h-96 mt-14 md:w-[50%] mx-auto">
             <select multiple id='menuItemList' className=" px-2 bg-neutral-100 border border-neutral-900 w-full h-[50%]">
                 {
                     gevondenMenuItems.map((menuitem) => (

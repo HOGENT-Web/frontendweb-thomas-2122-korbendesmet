@@ -1,7 +1,7 @@
 export default function AlgemeneVoorwaarden() {
     return (
         <div className="flex flex-grow bg-neutral-100">
-            <div className="w-[50%] mx-auto mt-8 text-xl">
+            <div className="lg:w-[70%] px-12 mx-auto my-8 text-xl">
                 <div className="text-2xl font-bold my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
                 <div className="text-justify">
                     Maxime mollitia,

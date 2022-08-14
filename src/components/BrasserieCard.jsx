@@ -63,6 +63,7 @@ const BrasserieCard = () => {
   }, [time]);
 
   useEffect(() => {
+    //Just a test
     setDisabledDays([
       {
         year: 2022,
@@ -182,7 +183,7 @@ const BrasserieCard = () => {
   }, []);
 
   return (
-    <div className="flex w-[30%]">
+    <div className="flex lg:w-[30%] justify-center">
       <div className="flex flex-col p-9 font-serif my-8 rounded-l-md bg-neutral-900 text-neutral-200 text-3xl">
         <div>Bar & Food</div>
         <div className="flex-grow" />

@@ -30,7 +30,7 @@ const Header = () => {
     }, [logout]);
 
     return (
-        <div>
+        <div id="header">
             {
                 !isAuthed ?
                     <div>
@@ -39,7 +39,7 @@ const Header = () => {
                                 <img onClick={() => nav('/')} src={logo} className="object-contain hover:cursor-pointer" alt="Green uk oil logo" />
                             </div>
                             <div className="my-auto">
-                                <button onClick={() => changeState(!enabled)} className="text-white text-xl p-2 hover:bg-neutral-800 rounded-lg border border-neutral-900 hover:border-neutral-700">Log in</button>
+                                <button id="loginButton" onClick={() => changeState(!enabled)} className="text-white text-xl p-2 hover:bg-neutral-800 rounded-lg border border-neutral-900 hover:border-neutral-700">Log in</button>
                             </div>
                         </div>
                         {
@@ -48,10 +48,10 @@ const Header = () => {
                                     <FormProvider {...methods}>
                                         <form onSubmit={handleSubmit(onSubmit)} id="form" className="mx-3 text-sm text-neutral-200">
                                             <label className="block ml-1 mt-2">Email: </label>
-                                            <input {...register('email')} type="text" label="email" className="w-full bg-neutral-900 border border-neutral-200 rounded-lg p-1" />
+                                            <input {...register('email')} id="email" type="text" label="email" className="w-full bg-neutral-900 border border-neutral-200 rounded-lg p-1" />
                                             <label className="block ml-1 mt-2">Wachtwoord: </label>
-                                            <input {...register('wachtwoord')} type="password" label="wachtwoord" className="w-full bg-neutral-900 border border-neutral-200 rounded-lg p-1" />
-                                            <input type="submit" disabled={loading} value="inloggen" className="underline hover:bg-neutral-800 bg-neutral-900 border border-neutral-900 hover:border-neutral-200 rounded-lg p-1 px-2 mt-3 float-right mb-2 italic" />
+                                            <input {...register('wachtwoord')} id="password" type="password" label="wachtwoord" className="w-full bg-neutral-900 border border-neutral-200 rounded-lg p-1" />
+                                            <input id="submit" type="submit" disabled={loading} value="inloggen" className="underline hover:bg-neutral-800 bg-neutral-900 border border-neutral-900 hover:border-neutral-200 rounded-lg p-1 px-2 mt-3 float-right mb-2 italic" />
                                             <div id="errorLogin" hidden={true} className="text-red-400 text-sm mt-4">Verkeerde gegevens!</div>
                                         </form>
                                     </FormProvider>
@@ -65,8 +65,8 @@ const Header = () => {
                                 <img onClick={() => nav('/')} src={logo} className="object-contain hover:cursor-pointer" alt="Green uk oil logo" />
                             </div>
                             <div className="my-auto">
-                                <button onClick={() => nav('/admin')} className="text-white text-xl p-2 hover:bg-neutral-800 rounded-lg border border-neutral-900 hover:border-neutral-700">Menu</button>
-                                <button onClick={() => handleLogout()} className="text-white text-xl p-2 hover:bg-neutral-800 rounded-lg border border-neutral-900 hover:border-neutral-700">Log uit</button>
+                                <button id="menuButton" onClick={() => nav('/admin')} className="text-white text-xl p-2 hover:bg-neutral-800 rounded-lg border border-neutral-900 hover:border-neutral-700">Menu</button>
+                                <button id="logoutButton"  onClick={() => handleLogout()} className="text-white text-xl p-2 hover:bg-neutral-800 rounded-lg border border-neutral-900 hover:border-neutral-700">Log uit</button>
                             </div>
                         </div>
                     </div>

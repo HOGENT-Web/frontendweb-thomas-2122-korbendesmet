@@ -52,7 +52,7 @@ const Admins = () => {
                 viewEnabled ?
                     <div>
                         <div onClick={() => toggleView(!viewEnabled)} className="mx-auto rounded-t-lg text-neutral-100 px-2 py-1 bg-neutral-900 hover:underline hover:cursor-pointer w-fit">Admin overzicht</div>
-                        <div className="border rounded-xl border-neutral-900 divide-neutral-900 p-6 mx-auto w-[30%]">
+                        <div className="border rounded-xl border-neutral-900 divide-neutral-900 p-6 mx-auto lg:w-[30%]">
                             <FormProvider {...methods}>
                                 <form onSubmit={handleSubmit(onSubmit)} id="form">
                                     <div className="flex justify-between">
@@ -74,7 +74,7 @@ const Admins = () => {
                     :
                     <div>
                         <div onClick={() => toggleView(!viewEnabled)} className="mx-auto rounded-t-lg text-neutral-100 px-2 py-1 bg-neutral-900 hover:underline hover:cursor-pointer w-fit">Admin aanmaken</div>
-                        <div className="mx-auto border rounded-xl border-neutral-900 divide-y divide-neutral-900 w-[45%]">
+                        <div className="mx-auto border rounded-xl border-neutral-900 divide-y divide-neutral-900 lg:w-[45%]">
                             {
                                 admins.map((admin) => (
                                     <div key={admin.adminID} className="flex flex-row py-1 w-full">
@@ -82,16 +82,16 @@ const Admins = () => {
                                             <div className="ml-2 capitalize p-1 font-bold">{admin.voornaam} {admin.achternaam}</div>
                                             <div className="p-1">({admin.email})</div>
                                         </div>
-                                        <button className="p-2 ml-4 mr-2 rounded-lg bg-red-500 hover:bg-red-700 text-white" onClick={() => toggleDemoteModal(!demoteModalEnabled)}>Verwijderen</button>
+                                        <button id={'delete' + admin.adminID} className="p-2 ml-4 mr-2 rounded-lg bg-red-500 hover:bg-red-700 text-white" onClick={() => toggleDemoteModal(!demoteModalEnabled)}>Verwijderen</button>
                                         {
                                             demoteModalEnabled ?
                                                 <div className="grid place-items-center fixed h-screen w-screen top-0 left-0 bg-black/[.2]">
-                                                    <div className="container rounded-xl border bg-neutral-200 flex flex-col w-2/6">
+                                                    <div className="container rounded-xl border bg-neutral-200 flex flex-col md:w-2/6">
                                                         <div className="text-neutral-200 rounded-t-xl font-serif font-bold text-center underline text-4xl border-b-2 py-4 px-5 bg-neutral-900">Admin verwijderen</div>
                                                         <div className="text-xl py-3 px-5 border-b-2 text-center">Bent u zeker of u deze admin wilt verwijderen? Dit kan niet ongedaan gemaakt worden!</div>
                                                         <div className="rounded-b-xl py-3 px-5 ml-auto">
-                                                            <button onClick={() => verwijderAdmin(admin.adminID)} className="mr-2 font-serif text-2xl rounded-md py-1 px-3 italic hover:underline">Ja!</button>
-                                                            <button onClick={() => toggleDemoteModal(!demoteModalEnabled)} className="text-neutral-200 text-2xl rounded-md py-1 px-3 font-serif bg-neutral-900 italic hover:underline">Nee!</button>
+                                                            <button id="remove" onClick={() => verwijderAdmin(admin.adminID)} className="mr-2 font-serif text-2xl rounded-md py-1 px-3 italic hover:underline">Ja!</button>
+                                                            <button id="close" onClick={() => toggleDemoteModal(!demoteModalEnabled)} className="text-neutral-200 text-2xl rounded-md py-1 px-3 font-serif bg-neutral-900 italic hover:underline">Nee!</button>
                                                         </div>
                                                     </div>
                                                 </div>

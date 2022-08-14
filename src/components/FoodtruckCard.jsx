@@ -63,6 +63,7 @@ const FoodtruckCard = () => {
     }, [time]);
 
     useEffect(() => {
+        //Just a test
         setDisabledDays([
             {
                 year: 2022,
@@ -182,7 +183,7 @@ const FoodtruckCard = () => {
     }, []);
 
     return (
-        <div className="flex w-[30%]">
+        <div className="flex lg:w-[30%] justify-center">
             <div className="w-[50%] p-5 text-right font-light  border-r border-neutral-600 my-8 rounded-l-md bg-neutral-900 text-neutral-200 text-md">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
             </div>
