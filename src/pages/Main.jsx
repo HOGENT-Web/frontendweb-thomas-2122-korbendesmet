@@ -37,7 +37,7 @@ export default function Main() {
                                 </div>
                             </div>
                         </div>
-                        <img alt="Afbeelding van Olijven" src={Afbeelding} className="mt-52 md:mt-0 h-80 rotate-6 rounded-lg" />
+                        <img alt="Afbeelding van Olijven" src={Afbeelding} className="mt-60 md:mt-0 h-80 rotate-6 rounded-lg" />
                     </div>
                 </div>
                 <Menu />
