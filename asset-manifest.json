@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/frontendweb-thomas-2122-korbendesmet/static/css/main.d75c7637.css",
-    "main.js": "/frontendweb-thomas-2122-korbendesmet/static/js/main.f56c1b7f.js",
+    "main.css": "/frontendweb-thomas-2122-korbendesmet/static/css/main.b94d16a0.css",
+    "main.js": "/frontendweb-thomas-2122-korbendesmet/static/js/main.dc3df7ed.js",
     "static/media/Banner.png": "/frontendweb-thomas-2122-korbendesmet/static/media/Banner.a0836c1f6ce651ad8364.png",
     "static/media/Olijven.jpg": "/frontendweb-thomas-2122-korbendesmet/static/media/Olijven.aac48c9d03eedecd727f.jpg",
     "index.html": "/frontendweb-thomas-2122-korbendesmet/index.html",
-    "main.d75c7637.css.map": "/frontendweb-thomas-2122-korbendesmet/static/css/main.d75c7637.css.map",
-    "main.f56c1b7f.js.map": "/frontendweb-thomas-2122-korbendesmet/static/js/main.f56c1b7f.js.map"
+    "main.b94d16a0.css.map": "/frontendweb-thomas-2122-korbendesmet/static/css/main.b94d16a0.css.map",
+    "main.dc3df7ed.js.map": "/frontendweb-thomas-2122-korbendesmet/static/js/main.dc3df7ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.d75c7637.css",
-    "static/js/main.f56c1b7f.js"
+    "static/css/main.b94d16a0.css",
+    "static/js/main.dc3df7ed.js"
   ]
 }
