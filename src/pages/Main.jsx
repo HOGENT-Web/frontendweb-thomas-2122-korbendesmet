@@ -11,7 +11,7 @@ export default function Main() {
             </div>
             <div className="">
                 <div className="w-[100%] mx-auto px-8">
-                    <div className="flex flex-wrap text-center my-16 text-xl md:w-[90%] mx-auto justify-around">
+                    <div className="flex flex-wrap text-center my-16 text-xl md:w-[90%] mx-auto justify-around px-4">
                         <BrasserieCard />
                         <div class="w-[2px] bg-black rounded-full" />
                         <FoodtruckCard />
@@ -19,10 +19,10 @@ export default function Main() {
                 </div>
                 <div className="flex flex-col bg-neutral-900 text-neutral-200">
                     <div className="mx-auto my-14 font-serif text-6xl">Quarante</div>
-                    <div className="lg:w-[50%] w-full mb-16 mx-auto md:grid md:grid-cols-2 gap-64 text-right px-12">
+                    <div className="lg:w-[50%] w-full mb-16 mx-auto md:grid md:grid-cols-2 gap-12 text-right px-12">
                         <div>
                             <div>SHARING FOOD. SIPPING WINE.</div>
-                            <div className="mt-6 mb-12">Nonam is een concept dat zich gedurende de dag transformeert. Het moment van de dag bepaalt de sfeer in het restaurant, de wijnbar en het hotel. Onze 'hideaway' in hartje Gent waar we zelf als gast zouden willen vertoeven en waar mensen zich écht goed voelen.</div>
+                            <div className="mt-6 mb-12">Quarante is een concept dat zich gedurende de dag transformeert. Het moment van de dag bepaalt de sfeer in het restaurant, de wijnbar en het hotel. Onze locatie in hartje Appelterre waar we zelf als gast zouden willen vertoeven en waar mensen zich écht goed voelen.</div>
                             <div className="flex gap-6 float-left">
                                 <div className="text-left">
                                     <div>maandag ~ gesloten</div>
@@ -37,7 +37,7 @@ export default function Main() {
                                 </div>
                             </div>
                         </div>
-                        <img alt="Afbeelding van Olijven" src={Afbeelding} className="mt-44 md:mt-0 h-80 rotate-6 rounded-lg" />
+                        <img alt="Afbeelding van Olijven" src={Afbeelding} className="mt-52 md:mt-0 h-80 rotate-6 rounded-lg" />
                     </div>
                 </div>
                 <Menu />
