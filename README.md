@@ -4,7 +4,7 @@ Quarante is een boekingsysteem voor een brasserie, verder is het ook mogelijk ee
 
 ## Technische praat
 
-Deze applicatie is gemaakt adv create-react-app en bestaat uit verschillende routes, componenten, paginas en providers om contact te nemen met de api.
+Deze applicatie is gemaakt adv create-react-app en bestaat uit verschillende routes, componenten, paginas en context providers om contact te nemen met de api.
 
 Vervolgens zijn dit alle imports:
 
